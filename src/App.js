@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+import {useState, useEffect} from 'react';
+import {client} from './client';
+import Blogpost from './Components/Blogpost';
 import './App.css';
 
 function App() {
+  const [blogPosts, setBlogPosts] = useState([]);
+
+useEffect(() => {
+    client.getEntries({ content_type: 'blogPost' })
+        .then((response) => {
+            console.log(response)
+            setBlogPosts(response.items)
+        })
+        .catch(console.error)
+}, []);
+console.log(process);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+                <div className='container'>
+                    <header>
+                        <div className='wrapper'>
+                            <span className='logo'>React and Contentful</span>
+                        </div>
+                    </header>
+                    <main>
+                        <div className='wrapper'>
+                            <Blogpost />
+                        </div>
+                    </main>
+                </div>
+            </div>
   );
 }
 
