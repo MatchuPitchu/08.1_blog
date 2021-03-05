@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+//Testkommentar
 const Blogpost = ({ post }) => {
 
     const { authorReference, datePublished, postContent, postImage, postTitle } = post.fields;
