@@ -16,7 +16,7 @@ const Blogpost = ({ post }) => {
 
             {/*I tried to return content of article in this line, but it doesn't work. */}
             
-            {postContent.content.map((index) => { index.content.map((innerIndex) => etwas=`${innerIndex.value}`) })}
+            {postContent.content.map((index) => { index.content.map((innerIndex) => etwas=`${etwas}${innerIndex.value}`) })}
             <p>{etwas}</p>
             {console.log(etwas)}
 
