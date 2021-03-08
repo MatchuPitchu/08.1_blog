@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Blogpost = ({ post }) => {
+    let etwas = '';
 
     const { authorReference, datePublished, postContent, postImage, postTitle } = post.fields;
     return (
@@ -14,7 +15,10 @@ const Blogpost = ({ post }) => {
             </div>
 
             {/*I tried to return content of article in this line, but it doesn't work. */}
-            <p>{postContent.content.map((index) => { index.content.map((innerIndex) => <p>{innerIndex.value}</p>) })}</p>
+            
+            {postContent.content.map((index) => { index.content.map((innerIndex) => etwas=`${innerIndex.value}`) })}
+            <p>{etwas}</p>
+            {console.log(etwas)}
 
 
         </div>
