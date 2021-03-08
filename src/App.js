@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { client } from './client';
-import BlogPosts from './Components/BlogPosts';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+// import my fontawesome library
+import Navbar from './components/Navbar';
+import BlogPosts from './components/BlogPosts';
 
 function App() {
     const [blogPosts, setBlogPosts] = useState([]);
@@ -17,6 +20,8 @@ function App() {
     console.log(process);
 
     return (
+    <>
+        <Navbar />
         <div className="App">
             <div className='container'>
                 <header>
@@ -31,6 +36,7 @@ function App() {
                 </main>
             </div>
         </div>
+    </>
     );
 }
 
