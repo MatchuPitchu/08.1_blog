@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+// import fontawesome for React
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChild, faRunning, faBiking, faTableTennis, faSwimmer, faFutbol, faSkiing } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     
@@ -11,13 +11,13 @@ const Navbar = () => {
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to="./">
                     <div className="d-flex justify-content-between">
-                        <FontAwesomeIcon icon={faChild} />
-                        <FontAwesomeIcon icon={faRunning} />
-                        <FontAwesomeIcon icon={faBiking} />
-                        <FontAwesomeIcon icon={faTableTennis} />
-                        <FontAwesomeIcon icon={faSwimmer} />
-                        <FontAwesomeIcon icon={faFutbol} />
-                        <FontAwesomeIcon icon={faSkiing} />
+                        <FontAwesomeIcon icon={['fa', 'child']} />
+                        <FontAwesomeIcon icon={['fa', 'running']} />
+                        <FontAwesomeIcon icon={['fa', 'biking']} />
+                        <FontAwesomeIcon icon={['fa', 'tabletennis']} />
+                        <FontAwesomeIcon icon={['fa', 'swimmer']} />
+                        <FontAwesomeIcon icon={['fa', 'futbol']} />
+                        <FontAwesomeIcon icon={['fa', 'skiing']} />
                     </div>
                     <div>The Blog about Sport in Life</div>
                 </NavLink>

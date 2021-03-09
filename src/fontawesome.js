@@ -1,11 +1,21 @@
-// Question Jorge: How to import that into React App?
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+    faHome,
+    faChild, 
+    faRunning, 
+    faBiking, 
+    faTableTennis,
+    faSwimmer, 
+    faFutbol, 
+    faSkiing } from '@fortawesome/free-solid-svg-icons';
 
-import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons'
-
-// We are only using the user-astronaut icon
-library.add(faUserAstronaut)
-
-// Replace any existing <i> tags with <svg> and set up a MutationObserver to
-// continue doing this as the DOM changes.
-dom.watch()
+library.add(
+    faHome,
+    faChild, 
+    faRunning, 
+    faBiking, 
+    faTableTennis, 
+    faSwimmer, 
+    faFutbol, 
+    faSkiing
+);

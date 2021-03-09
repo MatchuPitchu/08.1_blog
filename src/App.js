@@ -3,6 +3,7 @@ import { client } from './client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 // import my fontawesome library
+import './fontawesome';
 import Navbar from './components/Navbar';
 import BlogPosts from './components/BlogPosts';
 
