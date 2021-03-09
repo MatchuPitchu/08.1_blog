@@ -7,7 +7,8 @@ import {
     faTableTennis,
     faSwimmer, 
     faFutbol, 
-    faSkiing } from '@fortawesome/free-solid-svg-icons';
+    faSkiing,
+    faSearch } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
     faHome,
@@ -17,5 +18,6 @@ library.add(
     faTableTennis, 
     faSwimmer, 
     faFutbol, 
-    faSkiing
+    faSkiing,
+    faSearch
 );

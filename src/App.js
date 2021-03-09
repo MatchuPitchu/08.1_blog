@@ -5,6 +5,7 @@ import './App.css';
 // import my fontawesome library
 import './fontawesome';
 import Navbar from './components/Navbar';
+import HeaderImg from './components/HeaderImg';
 import BlogPosts from './components/BlogPosts';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     return (
     <>
         <Navbar />
+        <HeaderImg />
         <div className="App">
             <div className='container'>
                 <header>

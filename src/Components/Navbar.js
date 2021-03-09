@@ -12,18 +12,18 @@ const Navbar = () => {
                 <NavLink className="navbar-brand" to="./">
                     <div className="d-flex justify-content-between">
                         <FontAwesomeIcon icon={['fa', 'child']} />
-                        <FontAwesomeIcon icon={['fa', 'running']} />
-                        <FontAwesomeIcon icon={['fa', 'biking']} />
-                        <FontAwesomeIcon icon={['fa', 'tabletennis']} />
-                        <FontAwesomeIcon icon={['fa', 'swimmer']} />
-                        <FontAwesomeIcon icon={['fa', 'futbol']} />
-                        <FontAwesomeIcon icon={['fa', 'skiing']} />
+                        <FontAwesomeIcon className="sport-icon-right" icon={['fa', 'running']} />
+                        <FontAwesomeIcon className="sport-icon-right" icon={['fa', 'biking']} />
+                        <FontAwesomeIcon icon={['fa', 'table-tennis']} />
+                        <FontAwesomeIcon className="sport-icon-left" icon={['fa', 'swimmer']} />
+                        <FontAwesomeIcon className="sport-icon-rotate" icon={['fa', 'futbol']} />
+                        <FontAwesomeIcon className="sport-icon-desc" icon={['fa', 'skiing']} />
                     </div>
-                    <div>The Blog about Sport in Life</div>
+                    <div><b>The Blog</b> about Sports in Life</div>
                 </NavLink>
-                <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search your topic" aria-label="Search" />
-                    <button className="btn btn-secondary my-btn" type="submit">Search</button>
+                <form className="d-flex collapse.navbar-collapse">
+                    <input className="form-control searchbar" type="search" placeholder="Search your topic" aria-label="Search" />
+                    <span className="input-group-text search-icon-container"><FontAwesomeIcon icon={['fa', 'search']} type="submit"/></span>
                 </form>
             </div>
         </nav>
