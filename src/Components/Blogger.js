@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Blogger = ( {author} ) => {
-    console.log(author.fields.authorDescription);
 
     return (
         <div class="col-md-4">
@@ -9,7 +8,7 @@ const Blogger = ( {author} ) => {
                     <img className="row img-fluid img-author mb-3" src={author.fields.authorImage.fields.file.url} alt={author.fields.authorImage.fields.file.fileName}/>
                     <div className="row">
                         <p>{author.fields.authorDescription}</p>
-                        <footer class="blockquote-footer"><cite title="Source Title">{author.fields.authorName}</cite></footer>
+                        <footer className="blockquote-footer"><cite title="Source Title">{author.fields.authorName}</cite></footer>
                     </div>
                 </div>
         </div>

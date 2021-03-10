@@ -80,3 +80,24 @@ body {
   border-radius: 90%;
   margin: 0px auto;
 }
+
+/* Footer */
+.footer {
+  background-color: #ced0d0;
+  padding: 20px 0;
+  color: #191919;
+  border-top: 1px solid #191919;
+}
+
+.footer a {
+  color: #191919;
+  font-weight: 700;
+}
+
+.hr {
+  background-color: #191919;
+}
+
+.pointer {
+  cursor: pointer;
+}

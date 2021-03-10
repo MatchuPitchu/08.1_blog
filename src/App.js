@@ -10,8 +10,9 @@ import Navbar from './Components/Navbar';
 import HeaderImg from './Components/HeaderImg';
 import Blogger from './Components/Blogger';
 import BlogPosts from './Components/BlogPosts';
+import Footer from './Components/Footer';
 
-function App() {
+const App = () => {
     const [blogPosts, setBlogPosts] = useState([]);
     const [blogger, setBlogger] = useState([]);
 
@@ -23,7 +24,6 @@ function App() {
             })
             .catch(console.error)
     }, []);
-    console.log(process);
 
     useEffect(() => {
         client.getEntries({ content_type: 'author' })
@@ -33,8 +33,7 @@ function App() {
             })
             .catch(console.error)
     }, []);
-    console.log(process);
-    
+
     return (
     <>
         <Navbar />
@@ -54,6 +53,7 @@ function App() {
                 <BlogPosts posts={blogPosts} />
                 </div>
         </main>
+        <Footer />
     </>
     );
 }
