@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f8f9fa;
+}
+
 /* Sport Icons */
 .sport-icon-right:hover {
   transform: translate(12px);
@@ -51,7 +55,7 @@
   background-size: cover;
   background-position-y: center;
   width: 100%;
-  height: auto;
+  height: 500px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -66,4 +70,13 @@
   margin: 30px;
   padding: 10px 20px;
   opacity: 0.8;
+}
+
+/* Image Authors */
+.img-author {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 90%;
+  margin: 0px auto;
 }

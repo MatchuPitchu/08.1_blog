@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Blogpost = ({ post }) => {
     let etwas = '';
@@ -30,4 +30,4 @@ const Blogpost = ({ post }) => {
 // import Proptypes id also created when I used shortcut=^
 // }
 
-export default Blogpost
+export default Blogpost;
