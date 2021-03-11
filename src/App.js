@@ -39,15 +39,15 @@ const App = () => {
         <Navbar />
         <HeaderImg />
         <main className="container mt-5">
-            <h2>Here we are - the blogger</h2>
-            <div className="row">
-            {blogger && blogger.map(author => (
-                <Blogger key={uuid()} author={author}/>
-                ))
-            }
-            </div>
         <Switch>
             <Route exact path="/">
+                <h2>Here we are - the blogger</h2>
+                <div className="row">
+                {blogger && blogger.map(author => (
+                    <Blogger key={uuid()} author={author}/>
+                    ))
+                }
+                </div>
                 <h2 className="mt-5">The latest articles</h2>
                 <div className="row">
                     <BlogPostsAll posts={allPosts} />
