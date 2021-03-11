@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { client } from './client';
+import { Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 // unique id
@@ -9,7 +10,8 @@ import './fontawesome';
 import Navbar from './Components/Navbar';
 import HeaderImg from './Components/HeaderImg';
 import Blogger from './Components/Blogger';
-import AllPosts from './Components/AllPosts';
+import BlogPostsAll from './Components/BlogPostsAll';
+import BlogPostFull from './Components/BlogPostFull';
 import Footer from './Components/Footer';
 
 const App = () => {
@@ -19,7 +21,6 @@ const App = () => {
     useEffect(() => {
         client.getEntries({ content_type: 'blogPost' })
             .then((response) => {
-                console.log(response.items);
                 setAllPosts(response.items);
             })
             .catch(console.error)
@@ -28,7 +29,6 @@ const App = () => {
     useEffect(() => {
         client.getEntries({ content_type: 'author' })
             .then((response) => {
-                console.log(response.items);
                 setBlogger(response.items);
             })
             .catch(console.error)
@@ -41,17 +41,22 @@ const App = () => {
         <main className="container mt-5">
             <h2>Here we are - the blogger</h2>
             <div className="row">
-            {blogger && blogger.map(author => {
-                return (
-                    <Blogger key={uuid()} author={author}/>
-                    )
-                })
+            {blogger && blogger.map(author => (
+                <Blogger key={uuid()} author={author}/>
+                ))
             }
             </div>
-            <h2 className="mt-5">The latest articles</h2>
-            <div className="row">
-                <AllPosts posts={allPosts} />
+        <Switch>
+            <Route exact path="/">
+                <h2 className="mt-5">The latest articles</h2>
+                <div className="row">
+                    <BlogPostsAll posts={allPosts} />
                 </div>
+            </Route>
+            <Route path="/:blogID">
+                <BlogPostFull posts={allPosts}/>
+            </Route>
+        </Switch>
         </main>
         <Footer />
     </>

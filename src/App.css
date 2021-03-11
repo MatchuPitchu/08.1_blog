@@ -33,11 +33,27 @@ body {
 
 /* Searchbar */
 .searchbar {
+  padding: 10px;
+  border: solid #c8ccd0 1px;
+  border-radius: 3px 0px 0px 3px;
+  -webkit-transition: box-shadow linear 0.2s;
+  transition: box-shadow linear 0.2s;
   border-right: 0;
 }
 
+.searchbar:focus {
+  outline: none;
+  border-color: #6c757d;
+  box-shadow: 0 0 10px #6c757d;
+}
+
+.searchbar:hover {
+  border-color: #6c757d;
+  box-shadow: 0 0 10px #6c757d;
+}
+
 .search-icon-container {
-  background-color: #fff;
+  background-color: #eaecee;
   color: #6c757d;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -79,6 +95,37 @@ body {
   object-fit: cover;
   border-radius: 90%;
   margin: 0px auto;
+}
+
+/* Blog Posts */
+.linkToBlogPost {
+  background-color: #ccc;
+  width: 100%;
+  border-radius: 0;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.linkToBlogPost:hover {
+  background-color: #b6ac95;
+  width: 50%;
+  min-width: 100px;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+.btn-blogTeaser,
+.btn-blogTeaser:hover,
+.btn-blogTeaser:focus {
+  display: inline-block;
+  text-decoration: none !important;
+  color: #ffffff;
+  padding: 10px;
+  min-width: 100px;
+  border: 0;
+  box-shadow: 0;
 }
 
 /* Footer */

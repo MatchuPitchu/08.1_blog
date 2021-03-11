@@ -3,7 +3,7 @@ import React from 'react';
 const Blogger = ( {author} ) => {
 
     return (
-        <div class="col-md-4">
+        <div className="col-md-4">
                 <div className="col mt-3 mb-3">
                     <img className="row img-fluid img-author mb-3" src={author.fields.authorImage.fields.file.url} alt={author.fields.authorImage.fields.file.fileName}/>
                     <div className="row">

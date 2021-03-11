@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import fontawesome for React
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -25,7 +25,7 @@ const Navbar = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarToggler">
+                    <div className="collapse navbar-collapse" id="navbarToggler">
                     
                         <form className="d-flex ml-auto">
                             <input className="form-control searchbar" type="search" placeholder="Search your topic" aria-label="Search" />
