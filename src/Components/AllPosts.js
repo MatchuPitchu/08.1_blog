@@ -1,7 +1,8 @@
 import React from 'react';
 import BlogPost from './BlogPost';
 
-const BlogPosts = ({ posts }) => {
+const BlogPosts = ( { posts } ) => {
+    console.log(posts);
 
     return (
         <>

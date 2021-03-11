@@ -9,18 +9,18 @@ import './fontawesome';
 import Navbar from './Components/Navbar';
 import HeaderImg from './Components/HeaderImg';
 import Blogger from './Components/Blogger';
-import BlogPosts from './Components/BlogPosts';
+import AllPosts from './Components/AllPosts';
 import Footer from './Components/Footer';
 
 const App = () => {
-    const [blogPosts, setBlogPosts] = useState([]);
+    const [allPosts, setAllPosts] = useState([]);
     const [blogger, setBlogger] = useState([]);
 
     useEffect(() => {
         client.getEntries({ content_type: 'blogPost' })
             .then((response) => {
                 console.log(response.items);
-                setBlogPosts(response.items);
+                setAllPosts(response.items);
             })
             .catch(console.error)
     }, []);
@@ -50,7 +50,7 @@ const App = () => {
             </div>
             <h2 className="mt-5">The latest articles</h2>
             <div className="row">
-                <BlogPosts posts={blogPosts} />
+                <AllPosts posts={allPosts} />
                 </div>
         </main>
         <Footer />
