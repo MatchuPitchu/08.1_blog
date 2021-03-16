@@ -10,6 +10,10 @@ body {
   background-color: #f8f9fa;
 }
 
+h2 {
+  text-decoration: underline #c8ccd0;
+}
+
 /* Sport Icons */
 .sport-icon-right:hover {
   transform: translate(12px);
